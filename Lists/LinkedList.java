@@ -249,6 +249,22 @@ public class LinkedList<E> extends AbstractList<E> {
 			}
 		}
 	}
+	
+	@Override
+	public String toString() {
+		StringBuilder result = new StringBuilder("[");
+		
+		Node<E> current = head;
+		for (int i = 0; i < size; i++) {
+			result.append(current.element);
+			if (i != size - 1)
+				result.append(", ");
+			current = current.next;
+		}
+		
+		result.append("]");
+		return result.toString();
+	}
 
 	@Override
 	public java.util.Iterator<E> iterator() {

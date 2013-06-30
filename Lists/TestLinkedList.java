@@ -131,5 +131,9 @@ public class TestLinkedList {
 		list.append("Germany");
 		for (String s: list)
 			System.out.print(s.toUpperCase() + " "); // AMERICA CANADA RUSSIA GERMANY
+		System.out.println("\n");
+		
+		// Test toString()
+		System.out.println(list); // [America, Canada, Russia, Germany]
 	}
 }

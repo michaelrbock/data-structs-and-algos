@@ -11,6 +11,12 @@ public abstract class AbstractList<E> implements List<E> {
 			append(objects[i]);
 	}
 	
+	/** Add new element at the end of the list */
+	@Override
+	public void append(E e) {
+		insertAt(size, e);
+	}
+	
 	@Override
 	public boolean isEmpty() {
 		return size == 0;

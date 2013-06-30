@@ -130,6 +130,6 @@ public class TestLinkedList {
 		list.append("Russia");
 		list.append("Germany");
 		for (String s: list)
-			System.out.print(s.toUpperCase() + " ");
+			System.out.print(s.toUpperCase() + " "); // AMERICA CANADA RUSSIA GERMANY
 	}
 }

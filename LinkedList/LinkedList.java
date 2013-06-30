@@ -209,6 +209,7 @@ public class LinkedList<E> extends AbstractList<E> {
 			if (current.element.equals(e)) {
 				result = i;
 			}
+			current = current.next;
 		}
 		return result;
 	}
@@ -230,6 +231,11 @@ public class LinkedList<E> extends AbstractList<E> {
 	
 	public void print() {
 		System.out.print("[");
+		
+		if (size == 0) {
+			System.out.print("]\n");
+			return;
+		}
 		
 		Node<E> current = head;
 		for (int i = 0; i < size; i++) {

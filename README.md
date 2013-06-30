@@ -1,4 +1,4 @@
-data-structures
+Data Structures
 ===============
 
-Implementations of Data Structures and Algorithms
+Implementations of Data Structures and Algorithms in Java (and other languages).

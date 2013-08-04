@@ -2,7 +2,8 @@ def quicksort(lst):
 	if len(lst) <= 1:
 		return lst
 	lst, store_index = partition(lst)
-	return quicksort(lst[:store_index-1]) + [lst[store_index-1]] + quicksort(lst[store_index:])
+	lst = quicksort(lst[:store_index-1]) + [lst[store_index-1]] + quicksort(lst[store_index:])
+	return lst
 
 def partition(lst):
 	if len(lst) % 2 == 0:
@@ -31,9 +32,4 @@ def partition(lst):
 
 def get_median(nums):
 	values = sorted(nums)
-	if len(values) % 2 == 1:
-		return values[(len(values)+1)/2-1]
-	else:
-		lower = values[len(values)/2-1]
-		upper = values[len(values)/2]
-	return (lower+upper)/2
+	return values[1]
